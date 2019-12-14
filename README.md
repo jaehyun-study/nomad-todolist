@@ -1,5 +1,7 @@
-# To Do List
+# Features
 
-- [x] clock
-- [x] username
-- [x] to do list
+- [x] Clock.
+- [x] Username Persistance.
+- [x] To Do List.
+- [ ] Random Background Image.
+- [ ] Weather with Geolocation.
