@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>to do list</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
+  <body style="background-color: black;">
+    <div class="container">
+      <div class="weather-container">
+        <div class="js-weather weather"></div>
+        <div class="js-weather-text weather-text"></div>
+      </div>
+      <div class="js-clock clock">
+        <h1></h1>
+      </div>
+      <form class="js-form form">
+        <input type="text" placeholder="What's your name?" />
+      </form>
+      <h4 class="js-greetings greetings"></h4>
+      <form class="js-toDoForm toDoForm">
+        <input type="text" placeholder="Write a to do" />
+      </form>
+      <ul class="js-toDoList"></ul>
     </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What's your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-toDoList"></ul>
-    <span class="js-weather"></span>
+    <script src="weather.js"></script>
     <script src="clock.js"></script>
     <script src="greetings.js"></script>
     <script src="todo.js"></script>
     <script src="bgImage.js"></script>
-    <script src="weather.js"></script>
   </body>
 </html>

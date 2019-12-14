@@ -10,13 +10,13 @@ let lastId = 0;
 function paintToDo(toDo) {
   const li = document.createElement("li");
   li.id = toDo.id;
-  const span = document.createElement("span");
+  const span = document.createElement("div");
   span.innerText = toDo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  button.innerText = "X";
   button.addEventListener("click", deleteToDo);
-  li.appendChild(button);
   li.appendChild(span);
+  li.appendChild(button);
   toDoList.appendChild(li);
 }
 
