@@ -8,15 +8,14 @@ body {
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-width: 320px;
-  width: 90%;
+  width: 100%;
   height: 100%;
-  padding: 10px;
-  margin: 40px;
+  padding: 40px 10px;
   border-radius: 10px;
 }
 
@@ -42,14 +41,18 @@ body {
 
 .weather-container {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
   padding: 10px;
-  opacity: 0.6;
+  opacity: 0.8;
+}
+
+.weather-container:hover {
+  opacity: 1;
 }
 
 .clock {
@@ -62,27 +65,28 @@ body {
   display: none;
   margin: 20px 0px;
   font-size: 36px;
-  width: 80%;
+  width: 50%;
 }
 
 .showing {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 50%;
+  opacity: 0.8;
 }
 
-.toDoForm {
+form {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 50%;
   margin: 20px 0px;
 }
 
 input {
   background-color: transparent;
-  width: 60%;
+  width: 100%;
   margin: 10px 0px;
   font-size: 24px;
   border: 0;
@@ -100,19 +104,23 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  /* height: 100%; */
+  width: 50%;
+  max-height: 100%;
+  overflow: auto;
 }
 
 li {
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4px 0px;
-  font-size: 22px;
+  margin: 2px 0px;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
 li > div {
@@ -122,20 +130,25 @@ li > div {
 }
 
 li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 li:hover button {
   opacity: 1;
+  transform: scale(1);
 }
 
 button {
-  opacity: 0;
+  opacity: 0.2;
   border: 0;
   border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
   margin: 2px;
-  font-size: 18px;
+  font-size: 16px;
+  color: black;
   cursor: pointer;
+  transform: scale(0.5);
+  transition: all 0.3s ease-in-out;
 }
 
 button:focus {
